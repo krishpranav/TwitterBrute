@@ -3,7 +3,8 @@ trap 'store;exit 1' 2
 
 checkroot() {
 if [[ "$(id -u)" -ne 0 ]]; then
-    printf "\e[1;92mPlease, Run this tool as root\e[1;92m \n"
+    printf "\e[1;92mI Think So you did'nt read the README\e[1;92m \n"
+     printf "\e[1;92mPlease, Run This Tool As Root\e[1;92m \n"
     exit 1
 fi
 }
