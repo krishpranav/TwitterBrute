@@ -5,8 +5,15 @@ checkroot() {
 if [[ "$(id -u)" -ne 0 ]]; then
     printf "\e[1;92mI Think So you did'nt read the README\e[1;92m \n"
      printf "\e[1;92mPlease, Run This Tool As Root\e[1;92m \n"
+    author
     exit 1
 fi
+}
+
+author() {
+printf "\e[1;92m TOOL IS CREATED BY KRISNA PRANAV\e[1;92m \n"
+printf "\e[1;92m Github Link https://www.github.com/krishpranav\e[1;92m \n"
+printf "\e[1;92m DO NOT FORGET TO FOLLOW ME :)\e[1;92m \n"
 }
 
 dependencies() {
@@ -42,6 +49,7 @@ check=$(curl  -s https://check.torproject.org > /dev/null; echo $?)
 
 if [[ "$check" -gt 0 ]]; then
 printf "\e[1;91mPlease, check your TOR Connection! Just type service tor start on your linux terminal\n\e[0m"
+author
 exit 1
 fi
 }
